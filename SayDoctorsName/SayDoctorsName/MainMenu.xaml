@@ -1,0 +1,32 @@
+﻿<Window x:Class="SayDoctorsName.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SayDoctorsName"
+        mc:Ignorable="d"
+         WindowState="Maximized"
+        WindowStyle="None"
+        Title="MainMenu" Height="1080" Width="1920">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="114" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1920" Margin="0,-14,0,0" Fill="#FFEFEFEF"/>
+
+        <TextBlock x:Name="zapic_tv" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Записи"/>
+        <Button x:Name="exit_bt" HorizontalAlignment="Left" Margin="1714,13,0,0" VerticalAlignment="Top" Height="60" Width="174" Content="Закрыть" FontFamily="Heebo" FontSize="20" Background="#FFDC0909" Foreground="White" BorderBrush="{x:Null}" Click="exit_bt_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock x:Name="dat_tv" HorizontalAlignment="Center" Margin="0,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Сегодня:"/>
+        <TextBlock x:Name="fio_tv" HorizontalAlignment="Left" Margin="1342,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="ФИО:"/>
+        <Rectangle HorizontalAlignment="Left" Height="752" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1402" Margin="452,286,0,0" Fill="#FFEFEFEF"/>
+
+    </Grid>
+</Window>
