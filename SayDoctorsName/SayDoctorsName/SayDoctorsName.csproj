@@ -59,6 +59,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Zapic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Doctor.cs" />

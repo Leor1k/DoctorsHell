@@ -27,6 +27,7 @@
         <TextBlock x:Name="dat_tv" HorizontalAlignment="Center" Margin="0,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Сегодня:"/>
         <TextBlock x:Name="fio_tv" HorizontalAlignment="Left" Margin="1342,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="ФИО:"/>
         <Rectangle HorizontalAlignment="Left" Height="752" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1402" Margin="452,286,0,0" Fill="#FFEFEFEF"/>
+        <DataGrid x:Name="zapic_today" IsEnabled="False" AutoGenerateColumns="True" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="515,326,119,42"/>
 
     </Grid>
 </Window>

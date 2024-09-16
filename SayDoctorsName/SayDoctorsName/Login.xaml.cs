@@ -26,7 +26,8 @@ namespace SayDoctorsName
         {
             InitializeComponent();       
         }
-        public string connectString = "Server = DESKTOP-MTC2QH1\\SQLEXPRESS; Database = BaseForDoctors; Trusted_Connection=True";
+        public string connectString = "Server = (localdb)\\MSSQLLocalDB; Database = BaseForDoctors; Trusted_Connection=True";
+        //public string connectString = "Server = DESKTOP-MTC2QH1\\SQLEXPRESS; Database = BaseForDoctors; Trusted_Connection=True";
         private void exit_bt_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -75,7 +76,7 @@ namespace SayDoctorsName
                                 doctor.PlaceOdBirth = reader.GetString(13);
                                 doctor.FirstName = reader.GetString(14);
                                 doctor.SecondName = reader.GetString(15);
-                                MainMenu gom = new MainMenu(doctor);
+                                MainMenu gom = new MainMenu(doctor, connectString);
                                 gom.Show();
                                 Close();
                             }

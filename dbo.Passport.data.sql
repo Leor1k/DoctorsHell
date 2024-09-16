@@ -36,3 +36,7 @@ INSERT INTO [dbo].[Status] ([StatusId], [Status]) VALUES (1, N'Записан   
 INSERT INTO [dbo].[Status] ([StatusId], [Status]) VALUES (2, N'Не пришёл ')
 INSERT INTO [dbo].[Status] ([StatusId], [Status]) VALUES (3, N'Началась  ')
 INSERT INTO [dbo].[Status] ([StatusId], [Status]) VALUES (4, N'Закончена ')
+INSERT INTO [dbo].[Appointment] ([AppointmentId], [Doctor], [Patient], [Status], [Direction], [DateTemeAppoinment]) VALUES (1, 1, N'1234567890123456 ', 1, NULL, N'2024-09-16 12:00:00')
+INSERT INTO [dbo].[Appointment] ([AppointmentId], [Doctor], [Patient], [Status], [Direction], [DateTemeAppoinment]) VALUES (2, 2, N'1234567890123456 ', 1, NULL, N'2024-09-16 14:00:00')
+INSERT INTO [dbo].[Appointment] ([AppointmentId], [Doctor], [Patient], [Status], [Direction], [DateTemeAppoinment]) VALUES (3, 2, N'7894561230789456 ', 1, NULL, N'2024-09-16 15:00:00')
+INSERT INTO [dbo].[Appointment] ([AppointmentId], [Doctor], [Patient], [Status], [Direction], [DateTemeAppoinment]) VALUES (4, 1, N'7894561230789456 ', 1, NULL, N'2024-09-16 16:00:00')

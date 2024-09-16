@@ -241,6 +241,51 @@ IF fulltextserviceproperty(N'IsFulltextInstalled') = 1
 
 
 GO
+PRINT N'Идет создание Таблица [dbo].[Appointment]…';
+
+
+GO
+CREATE TABLE [dbo].[Appointment] (
+    [AppointmentId]      INT        NOT NULL,
+    [Doctor]             INT        NOT NULL,
+    [Patient]            NCHAR (17) NOT NULL,
+    [Status]             INT        NOT NULL,
+    [Direction]          INT        NULL,
+    [DateTemeAppoinment] DATETIME   NOT NULL,
+    PRIMARY KEY CLUSTERED ([AppointmentId] ASC)
+);
+
+
+GO
+PRINT N'Идет создание Таблица [dbo].[Patient]…';
+
+
+GO
+CREATE TABLE [dbo].[Patient] (
+    [HealthInsuranceNumber] NCHAR (17) NOT NULL,
+    [PassportId]            INT        NOT NULL,
+    PRIMARY KEY CLUSTERED ([HealthInsuranceNumber] ASC)
+);
+
+
+GO
+PRINT N'Идет создание Таблица [dbo].[Doctor]…';
+
+
+GO
+CREATE TABLE [dbo].[Doctor] (
+    [DoctorId]      INT        NOT NULL,
+    [Speciality]    INT        NOT NULL,
+    [Passport]      INT        NOT NULL,
+    [DateStartWork] DATE       NOT NULL,
+    [Login]         NCHAR (25) NOT NULL,
+    [Password]      NCHAR (30) NOT NULL,
+    [root]          BIT        NOT NULL,
+    PRIMARY KEY CLUSTERED ([DoctorId] ASC)
+);
+
+
+GO
 PRINT N'Идет создание Таблица [dbo].[Passport]…';
 
 
@@ -339,111 +384,12 @@ CREATE TABLE [dbo].[Status] (
 
 
 GO
-PRINT N'Идет создание Таблица [dbo].[Doctor]…';
-
-
-GO
-CREATE TABLE [dbo].[Doctor] (
-    [DoctorId]      INT        NOT NULL,
-    [Speciality]    INT        NOT NULL,
-    [Passport]      INT        NOT NULL,
-    [DateStartWork] DATE       NOT NULL,
-    [Login]         NCHAR (25) NOT NULL,
-    [Password]      NCHAR (30) NOT NULL,
-    [root]          BIT        NOT NULL,
-    PRIMARY KEY CLUSTERED ([DoctorId] ASC)
-);
-
-
-GO
-PRINT N'Идет создание Таблица [dbo].[Patient]…';
-
-
-GO
-CREATE TABLE [dbo].[Patient] (
-    [HealthInsuranceNumber] NCHAR (17) NOT NULL,
-    [PassportId]            INT        NOT NULL,
-    PRIMARY KEY CLUSTERED ([HealthInsuranceNumber] ASC)
-);
-
-
-GO
-PRINT N'Идет создание Таблица [dbo].[Appointment]…';
-
-
-GO
-CREATE TABLE [dbo].[Appointment] (
-    [AppointmentId]      INT        NOT NULL,
-    [Doctor]             INT        NOT NULL,
-    [Patient]            NCHAR (17) NOT NULL,
-    [Status]             INT        NOT NULL,
-    [Direction]          INT        NOT NULL,
-    [DateTemeAppoinment] INT        NOT NULL,
-    PRIMARY KEY CLUSTERED ([AppointmentId] ASC)
-);
-
-
-GO
 PRINT N'Идет создание Ограничение по умолчанию ограничение без названия для [dbo].[Doctor]…';
 
 
 GO
 ALTER TABLE [dbo].[Doctor]
     ADD DEFAULT 0 FOR [root];
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Date_Doctor]…';
-
-
-GO
-ALTER TABLE [dbo].[Date_Doctor]
-    ADD FOREIGN KEY ([Date]) REFERENCES [dbo].[Date] ([DateId]);
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Date_Doctor]…';
-
-
-GO
-ALTER TABLE [dbo].[Date_Doctor]
-    ADD FOREIGN KEY ([Doctor]) REFERENCES [dbo].[Doctor] ([DoctorId]);
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Direction]…';
-
-
-GO
-ALTER TABLE [dbo].[Direction]
-    ADD FOREIGN KEY ([SickLeave]) REFERENCES [dbo].[SickLeave] ([SickLeaveId]);
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Doctor]…';
-
-
-GO
-ALTER TABLE [dbo].[Doctor]
-    ADD FOREIGN KEY ([Speciality]) REFERENCES [dbo].[Speciality] ([SpecialityId]);
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Doctor]…';
-
-
-GO
-ALTER TABLE [dbo].[Doctor]
-    ADD FOREIGN KEY ([Passport]) REFERENCES [dbo].[Passport] ([PassportId]);
-
-
-GO
-PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Patient]…';
-
-
-GO
-ALTER TABLE [dbo].[Patient]
-    ADD FOREIGN KEY ([PassportId]) REFERENCES [dbo].[Passport] ([PassportId]);
 
 
 GO
@@ -480,6 +426,60 @@ PRINT N'Идет создание Внешний ключ ограничение
 GO
 ALTER TABLE [dbo].[Appointment]
     ADD FOREIGN KEY ([Direction]) REFERENCES [dbo].[Direction] ([DirectionId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Patient]…';
+
+
+GO
+ALTER TABLE [dbo].[Patient]
+    ADD FOREIGN KEY ([PassportId]) REFERENCES [dbo].[Passport] ([PassportId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Doctor]…';
+
+
+GO
+ALTER TABLE [dbo].[Doctor]
+    ADD FOREIGN KEY ([Speciality]) REFERENCES [dbo].[Speciality] ([SpecialityId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Doctor]…';
+
+
+GO
+ALTER TABLE [dbo].[Doctor]
+    ADD FOREIGN KEY ([Passport]) REFERENCES [dbo].[Passport] ([PassportId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Date_Doctor]…';
+
+
+GO
+ALTER TABLE [dbo].[Date_Doctor]
+    ADD FOREIGN KEY ([Date]) REFERENCES [dbo].[Date] ([DateId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Date_Doctor]…';
+
+
+GO
+ALTER TABLE [dbo].[Date_Doctor]
+    ADD FOREIGN KEY ([Doctor]) REFERENCES [dbo].[Doctor] ([DoctorId]);
+
+
+GO
+PRINT N'Идет создание Внешний ключ ограничение без названия для [dbo].[Direction]…';
+
+
+GO
+ALTER TABLE [dbo].[Direction]
+    ADD FOREIGN KEY ([SickLeave]) REFERENCES [dbo].[SickLeave] ([SickLeaveId]);
 
 
 GO
