@@ -4,10 +4,6 @@ C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\bin\Debug\Bas
 C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.sqlproj.AssemblyReference.cache
 C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.dll
 C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.pdb
-C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\Model.xml
-C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\refactor.xml
-C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\postdeploy.sql
-C:\Users\Poncho\Desktop\DoctorHelpMe\BaseForDoctors\BaseForDoctors\obj\Debug\predeploy.sql
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.dacpac
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.dll
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.pdb
@@ -18,3 +14,13 @@ C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\refactor.xml
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\postdeploy.sql
 C:\Users\318_3\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\predeploy.sql
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.dacpac
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.dll
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\bin\Debug\BaseForDoctors.pdb
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.sqlproj.AssemblyReference.cache
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\Model.xml
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\refactor.xml
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\postdeploy.sql
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\predeploy.sql
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.dll
+C:\Users\317_4\Desktop\DoctorsHell-main\BaseForDoctors\BaseForDoctors\obj\Debug\BaseForDoctors.pdb

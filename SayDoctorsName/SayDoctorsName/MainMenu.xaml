@@ -10,8 +10,6 @@
         Title="MainMenu" Height="1080" Width="1920">
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="114" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1920" Margin="0,-14,0,0" Fill="#FFEFEFEF"/>
-
-        <TextBlock x:Name="zapic_tv" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Записи"/>
         <Button x:Name="exit_bt" HorizontalAlignment="Left" Margin="1714,13,0,0" VerticalAlignment="Top" Height="60" Width="174" Content="Закрыть" FontFamily="Heebo" FontSize="20" Background="#FFDC0909" Foreground="White" BorderBrush="{x:Null}" Click="exit_bt_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -24,10 +22,187 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBlock x:Name="dat_tv" HorizontalAlignment="Center" Margin="0,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Сегодня:"/>
         <TextBlock x:Name="fio_tv" HorizontalAlignment="Left" Margin="1342,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="ФИО:"/>
-        <Rectangle HorizontalAlignment="Left" Height="752" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1402" Margin="452,286,0,0" Fill="#FFEFEFEF"/>
-        <DataGrid x:Name="zapic_today" IsEnabled="False" AutoGenerateColumns="True" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="515,326,119,42"/>
+        <TextBlock TextWrapping="Wrap" Text="Root" Margin="1650,28,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" Foreground="#FF6B6B6B" FontSize="22"/>
+        <Button x:Name="new_zapic_bt" HorizontalAlignment="Left" Margin="288,13,0,0" VerticalAlignment="Top" Height="60" Width="213" Content="Записать на приём" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}" Click="new_zapic_bt_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Direction_bt" HorizontalAlignment="Left" Margin="529,13,0,0" VerticalAlignment="Top" Height="60" Width="174" Content="Выписки" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}" Click="Direction_bt_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="pacient_bt_Копировать" HorizontalAlignment="Left" Margin="1396,13,0,0" VerticalAlignment="Top" Height="60" Width="230" Content="Добавить Специалиста" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="today_bt" HorizontalAlignment="Left" Margin="31,13,0,0" VerticalAlignment="Top" Height="60" Width="213" Content="Записи на сегодня" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}" Click="today_bt_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Grid x:Name="mainGrid" HorizontalAlignment="Left" Height="938" Margin="-24,105,0,0" VerticalAlignment="Top" Width="1883" d:IsHidden="True">
 
+            <TextBlock x:Name="zapic_tv" HorizontalAlignment="Left" Margin="1016,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Записи" d:IsHidden="True"/>
+            <TextBlock x:Name="dat_tv" HorizontalAlignment="Left" Margin="1038,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Сегодня:"/>
+            <Rectangle HorizontalAlignment="Left" Height="752" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1402" Margin="481,186,0,0" Fill="#FFEFEFEF"/>
+            <DataGrid x:Name="zapic_today" IsReadOnly="True" AutoGenerateColumns="True" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="556,225,47,42" MouseDoubleClick="zapic_today_MouseDoubleClick"/>
+            <Button x:Name="start_appoint" HorizontalAlignment="Left" Margin="119,758,0,0" VerticalAlignment="Top" Height="60" Width="212" Content="Начать" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}" Click="new_zapic_bt_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TextBlock x:Name="pacient_tv" HorizontalAlignment="Left" Margin="119,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Пациент: не выбран"/>
+            <TextBlock x:Name="fio_tv1" HorizontalAlignment="Left" Margin="57,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="ФИО: не выбрано"/>
+            <TextBlock x:Name="helth_tv" HorizontalAlignment="Left" Margin="57,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Номер полиса: не выбрано"/>
+        </Grid>
+        <Grid x:Name="appointment_grid" Margin="375,105,0,0" Visibility="Hidden" d:IsHidden="True">
+            <Rectangle HorizontalAlignment="Center" Height="834" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1402" Margin="0,35,0,0" Fill="#FFEFEFEF"/>
+
+            <TextBlock x:Name="pacient_tv_Копировать" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Приём"/>
+            <TextBlock x:Name="pacient_tv_Копировать1" HorizontalAlignment="Left" Margin="100,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Диагноз"/>
+            <TextBox x:Name="diagnoz_tb" HorizontalAlignment="Left" Margin="249,166,0,0" 
+            TextWrapping="Wrap" MaxLength="80" 
+            VerticalAlignment="Top" Width="500" Height="40" 
+            FontSize="24" FontFamily="Heebo">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <TextBox x:Name="rec_tb" HorizontalAlignment="Left" Margin="304,230,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="1031" Height="40" 
+                FontSize="24" FontFamily="Heebo">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <TextBlock x:Name="pacient_tv_Копировать4" HorizontalAlignment="Left" Margin="100,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Припараты"/>
+            <TextBlock x:Name="pacient_tv_Копировать5" HorizontalAlignment="Left" Margin="102,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Рекомендации"/>
+            <TextBox x:Name="medicines_tb" HorizontalAlignment="Left" Margin="267,303,0,0" 
+                TextWrapping="Wrap"  
+                VerticalAlignment="Top" Width="1031" Height="40" 
+                FontSize="24" FontFamily="Heebo">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <TextBlock x:Name="pacient_tv_Копировать2" HorizontalAlignment="Left" Margin="102,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Больничный:"/>
+            <CheckBox x:Name="YepNope" Content="Нужен" HorizontalAlignment="Left" Margin="285,387,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Checked="YepNope_Checked" Unchecked="YepNope_Unchecked"/>
+            <Button x:Name="end_appoint_bt" HorizontalAlignment="Left" Margin="1232,780,0,0" VerticalAlignment="Top" Height="60" Width="174" Content="Закончить" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Grid x:Name="sill_grid" Margin="102,437,110,159" IsEnabled="False">
+                <TextBlock x:Name="pacient_tv_Копировать3" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Дата выхода на больничный"/>
+                <TextBlock x:Name="pacient_tv_Копировать6" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Дата окончания больничного"/>
+                <TextBox x:Name="date_start_et" HorizontalAlignment="Left" Margin="399,10,0,0" 
+                    TextWrapping="Wrap" MaxLength="20" 
+                    VerticalAlignment="Top" Width="231" Height="38" 
+                    FontSize="24" FontFamily="Heebo">
+                    <TextBox.Template>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">
+                                <ScrollViewer x:Name="PART_ContentHost" />
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+                <TextBox x:Name="date_end_et" HorizontalAlignment="Left" Margin="399,53,0,0" 
+                TextWrapping="Wrap" MaxLength="20" 
+                VerticalAlignment="Top" Width="231" Height="38" 
+                FontSize="24" FontFamily="Heebo">
+                    <TextBox.Template>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">
+                                <ScrollViewer x:Name="PART_ContentHost" />
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+            </Grid>
+            <Button x:Name="canel_bt" HorizontalAlignment="Left" Margin="1319,72,0,0" VerticalAlignment="Top" Height="60" Width="116" Content="Отмена" FontFamily="Heebo" FontSize="20" Background="#FF6B6B6B" Foreground="White" BorderBrush="{x:Null}" Click="canel_bt_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="1" 
+                            CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <Grid x:Name="DirectionGrid" Margin="42,151,61,37">
+            <TextBlock x:Name="date_zapic_tv" HorizontalAlignment="Left" Margin="10,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Время записи:"/>
+            <TextBlock x:Name="sick_lev" HorizontalAlignment="Left" Margin="10,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Больничный:"/>
+            <TextBlock x:Name="diagron_tv" HorizontalAlignment="Left" Margin="10,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Диагноз:"/>
+            <TextBlock x:Name="lech_tv" HorizontalAlignment="Left" Margin="10,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Лечение:"/>
+            <Rectangle HorizontalAlignment="Left" Height="685" RadiusX="15" RadiusY="15" StrokeThickness="3" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="1093" Margin="646,155,0,0" Fill="#FFEFEFEF"/>
+            <TextBlock x:Name="zapic_tv_Copy" HorizontalAlignment="Left" Margin="908,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Выписки"/>
+            <DataGrid x:Name="dir_grid" AutoGenerateColumns="True" IsReadOnly="True" Margin="744,188,177,84" MouseDoubleClick="dir_grid_MouseDoubleClick"/>
+            <TextBlock x:Name="zapic_tv_Copy1" HorizontalAlignment="Left" Margin="244,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Инфо"/>
+            <TextBlock x:Name="doctor_tv" HorizontalAlignment="Left" Margin="10,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Врач:"/>
+            <TextBlock x:Name="fio_patient_tv" HorizontalAlignment="Left" Margin="10,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Фио пациента:"/>
+        </Grid>
     </Grid>
 </Window>
