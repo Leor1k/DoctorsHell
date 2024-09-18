@@ -118,7 +118,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="696,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Электронная почта"/>
         <TextBlock HorizontalAlignment="Left" Margin="696,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontFamily="Heebo" Foreground="#FF6B6B6B" Text="Пароль"/>
         <TextBox x:Name="login_tb" HorizontalAlignment="Left" Margin="696,348,0,0" 
-         TextWrapping="Wrap" Text="dr_ivanov" MaxLength="20" 
+         TextWrapping="Wrap" Text="dr_ivanov                " MaxLength="20" 
          VerticalAlignment="Top" Width="520" Height="45" 
          FontSize="24" FontFamily="Heebo">
             <TextBox.Template>
@@ -130,7 +130,7 @@
             </TextBox.Template>
         </TextBox>
 
-        <TextBox x:Name="pass_tb" HorizontalAlignment="Left" Margin="696,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  MaxLength="20" Width="520" Height="45" FontSize="24" FontFamily="Heebo" Text="password123">
+        <TextBox x:Name="pass_tb" HorizontalAlignment="Left" Margin="696,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  MaxLength="20" Width="520" Height="45" FontSize="24" FontFamily="Heebo" Text="password123                   ">
             <TextBox.Template>
                 <ControlTemplate>
                     <Border CornerRadius="12" Padding="2" BorderThickness="4" BorderBrush="#FF6B6B6B">

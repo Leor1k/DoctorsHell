@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CC2D936-1956-4D47-91CF-94CC07801761}|SayDoctorsName\\SayDoctorsName.csproj|C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\saydoctorsname\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CC2D936-1956-4D47-91CF-94CC07801761}|SayDoctorsName\\SayDoctorsName.csproj|solutionrelative:saydoctorsname\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CC2D936-1956-4D47-91CF-94CC07801761}|SayDoctorsName\\SayDoctorsName.csproj|c:\\users\\medvedskijae\\desktop\\mbave\\doctorshell\\saydoctorsname\\saydoctorsname\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CC2D936-1956-4D47-91CF-94CC07801761}|SayDoctorsName\\SayDoctorsName.csproj|solutionrelative:saydoctorsname\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\SayDoctorsName\\MainMenu.xaml",
+              "RelativeDocumentMoniker": "SayDoctorsName\\MainMenu.xaml",
+              "ToolTip": "C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\SayDoctorsName\\MainMenu.xaml",
+              "RelativeToolTip": "SayDoctorsName\\MainMenu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-18T08:46:32.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\SayDoctorsName\\MainMenu.xaml.cs",
+              "RelativeDocumentMoniker": "SayDoctorsName\\MainMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\medvedskijae\\Desktop\\Mbave\\DoctorsHell\\SayDoctorsName\\SayDoctorsName\\MainMenu.xaml.cs",
+              "RelativeToolTip": "SayDoctorsName\\MainMenu.xaml.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAIA9wNABAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T07:28:57.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

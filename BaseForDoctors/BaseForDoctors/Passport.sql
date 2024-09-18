@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Passport]
 (
-	[PassportId] INT NOT NULL PRIMARY KEY, 
+	[PassportId] INT NOT NULL  PRIMARY KEY, 
     [FirstName] NCHAR(25) NOT NULL, 
     [LastName] NCHAR(25) NOT NULL, 
     [SecondName] NCHAR(25) NULL, 

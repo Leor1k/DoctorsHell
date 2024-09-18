@@ -60,6 +60,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Direction.cs" />
+    <Compile Include="patient.cs" />
     <Compile Include="SickLeavr.cs" />
     <Compile Include="Zapic.cs" />
   </ItemGroup>

@@ -32,7 +32,6 @@ namespace SayDoctorsName
         {
             this.Close();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (login_tb.Text.Length ==0 || pass_tb.Text.Length == 0)
@@ -48,7 +47,7 @@ namespace SayDoctorsName
         {
             try
             {
-                string sqlEx = $"Select Doctor.root, Doctor.DoctorId, Doctor.Login, Doctor.Password,  Doctor.DateStartWork, Speciality.Speciality, Passport.LastName, Serial, Number, Issued, Gender, DateIssued, DateBirth, PlaceOfBirth, Passport.FirstName, Passport.SecondName from Doctor Inner join Passport on Doctor.Passport = Passport.PassportId Inner join Speciality on Doctor.Speciality = Speciality.SpecialityId where Doctor.Login = '{login_tb.Text}' and  Doctor.Password = '{pass_tb.Text}'";
+                string sqlEx = $"Select Doctor.root, Doctor.DoctorId, Doctor.Login, Doctor.Password,  Doctor.DateStartWork, Speciality.Speciality, Passport.LastName, Serial, Number, Issued, Gender, DateIssued, DateBirth, PlaceOfBirth, Passport.FirstName, Passport.SecondName from Doctor Inner join Passport on Doctor.Passport = Passport.PassportId Inner join Speciality on Doctor.Speciality = Speciality.SpecialityId where Doctor.Login = '{login_tb.Text.Trim()}' and  Doctor.Password = '{pass_tb.Text.Trim()}'";
                 using (SqlConnection connection = new SqlConnection(connectString))
                 {
                     connection.Open();
@@ -94,5 +93,4 @@ namespace SayDoctorsName
             }
         }
     }
-    
 }
